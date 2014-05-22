@@ -1,4 +1,6 @@
-book-heroku-node
+Heroku + Node.js
 ================
 
-A Book about application with node.js on heroku
+Learn how to build applications with heroku and node.js.
+
+
