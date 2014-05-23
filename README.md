@@ -15,4 +15,4 @@ In this book, we'll learn how to deploy Javascript/Node.JS application on Heroku
 
 Node.js is a software platform for scalable server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on Mac OS X, Windows and Linux with no changes.
 
-In this book, we'll consider that you now the basics about Node.js and Javascript, and we'll be only focus on the heroku and deployment part.
+In this book, we'll consider that you now the basics about We Applications and Javascript, and we'll be only focus on the heroku and deployment part.
