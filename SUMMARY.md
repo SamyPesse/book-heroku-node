@@ -3,6 +3,6 @@
 * [Creating the application](creation.md)
 * [Coding the application](coding.md)
 * [Testing](testing.md)
-* Deployment
+* [Deployment](deployment.md)
 * Configuration
 
