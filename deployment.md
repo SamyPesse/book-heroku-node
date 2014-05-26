@@ -8,6 +8,11 @@ If you haven't already, sign up on [Heroku](https://heroku.com). It's free and e
 
 Click on the button "Create a new app" and enter a name for your application. You can select the region that you want, it doesn't change anything for the deployment.
 
+### Install the Heroku Command Line Tool
+
+First, install the Heroku Toolbelt on your local workstation. You can find it at [toolbelt.heroku.com](https://toolbelt.heroku.com/).
+
+
 ### Commit your changes
 
 The first is to commit your changes (main.js and Procfile):
@@ -29,4 +34,26 @@ You can now commit the other changes using:
 ```
 $ git add .
 $ git commit -m "Base code"
+```
+
+### Pushing to Heroku
+
+It is now time to push to Heroku. In the configuration or homepage of your Heroku application, you can see a GIT url with the following format:
+
+```
+git@heroku.com:{{ application name }}.git
+```
+
+To deploy a new release of your application, simply run:
+
+```
+$ git push heroku master
+```
+
+Heroku will log the installation of the node dependencies and the launch of your application.
+
+Once it's done you can open your application using:
+
+```
+$ heroku open
 ```
