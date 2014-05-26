@@ -17,3 +17,38 @@ So install it using:
 ```
 $ npm install express@4.3.1 --save
 ```
+
+### Hello World
+
+[Express](http://expressjs.com/) is web application framework for node, it makes it really easy to write web application using node.
+
+Write in a file named **main.js**:
+
+```js
+var express = require("express");
+var app = express();
+
+app.get('/', function(req, res) {
+  res.send('Hello World!');
+});
+
+var port = Number(process.env.PORT || 5000);
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
+
+```
+
+This code will simply create an application using Express. Define an handling method for a get request on the root path. And start the web server on the port defined by the environment variable `PORT` or `5000`.
+
+### Run Script
+
+Heroku convention needs a `Procfile` file that defines how to start the application. You can learn more about **Procfile** in the [Heroku documentation](https://devcenter.heroku.com/articles/procfile).
+
+Write in a file named **Procfile**:
+
+```
+web: node main.js
+```
+
+This file simply tell Heroku that for starting this applciation, it needs to start a web dyno by running the command `nano main.js`.
