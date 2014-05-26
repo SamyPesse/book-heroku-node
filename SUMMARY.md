@@ -2,7 +2,7 @@
 
 * [Creating the application](creation.md)
 * [Coding the application](coding.md)
-* Testing
+* [Testing](testing.md)
 * Deployment
 * Configuration
 
