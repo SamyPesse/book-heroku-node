@@ -57,7 +57,7 @@ So we need to store our configuration in a file. By default foreman use a file n
 
 So we'll store our configuration in a file named `.env.local`:
 
-````
+```
 MESSAGE=Hello from the local version
 ```
 
@@ -69,4 +69,56 @@ env: .env.local
 ```
 
 You can then test using `foreman start` and see teh output: `Hello from the local version`.
+
+### Deployment of a production configuration
+
+We are going to store our production configuration in a file named `.env`:
+
+```
+MESSAGE=Hello from the production version
+```
+
+Then we need to commit all these changes and deploy the last update of our code to Heroku:
+
+```
+# Commit changes
+$ git add .
+$ git commit -m "Use environment variables as configuration"
+
+# Deploy to heroku
+$ git push heroku master
+```
+
+But if you take a look at your application (using `heroku open`), you can see that the message is still "Default message!". It's because we didn't pushed your configuration to heroku yet.
+
+For this we are going to use the plugin [heroku-config](https://github.com/ddollar/heroku-config), install it using:
+
+```
+$ heroku plugins:install git://github.com/ddollar/heroku-config.git
+```
+
+And then we can push our all configuration using:
+
+```
+$ heroku config:push
+```
+
+Now take a look at your application and you'll see "Hello from the production version".
+
+### Managing Heroku configuraiton by hand
+
+| I want to... | Command |
+| -- | -- |
+| List all my configuraton | `heroku config` |
+| Get a variable value | `heroku config:get MESSAGE` |
+| Set a variable value | `heroku config:set MESSAGE=Test` |
+| Delete a variable | `heroku config:unset MESSAGE` |
+
+And with the plugin **heroku-config**:
+
+| I want to... | Command |
+| -- | -- |
+| Push my .env to heroku | `heroku config:push` |
+| Update my .env with my heroku config | `heroku config:pull` |
+| Rewrite my .env with my heroku config | `heroku config:pull --overwrite` |
 
