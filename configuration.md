@@ -48,3 +48,25 @@ But you can test changing the value of **MESSAGE** in your terminal and running 
 $ export MESSAGE=Hello
 $ foreman start
 ```
+
+### Storing a fixed configuration for foreman
+
+You don't want to define using `export` our all configuration each time you want to start working on your application!
+
+So we need to store our configuration in a file. By default foreman use a file named `.env` but we are going to use this file for your production configuration.
+
+So we'll store our configuration in a file named `.env.local`:
+
+````
+MESSAGE=Hello from the local version
+```
+
+And we need to update foreman configuration by writting the file `.foreman`:
+
+```
+port: 5000
+env: .env.local
+```
+
+You can then test using `foreman start` and see teh output: `Hello from the local version`.
+
