@@ -4,5 +4,5 @@
 * [Coding the application](coding.md)
 * [Testing](testing.md)
 * [Deployment](deployment.md)
-* Configuration
+* [Configuration](configuration.md)
 
