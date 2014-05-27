@@ -1,6 +1,6 @@
 {
     "name": "book-heroku-node",
-    "version": "0.0.5",
+    "version": "1.0.0",
     "description": "Learn how to build applications with heroku and node.js",
     "repository": {
         "type": "git",
