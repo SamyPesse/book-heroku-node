@@ -105,7 +105,7 @@ $ heroku config:push
 
 Now take a look at your application and you'll see "Hello from the production version".
 
-### Managing Heroku configuraiton by hand
+### Managing Heroku configuration by hand
 
 | I want to... | Command |
 | -- | -- |
