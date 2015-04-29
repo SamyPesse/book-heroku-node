@@ -1,4 +1,4 @@
-Heroku + Node.js test
+Heroku + Node.js
 ================
 
 Learn how to build and deploy applications with Heroku and Node.js.
