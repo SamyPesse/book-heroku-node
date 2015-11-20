@@ -51,4 +51,4 @@ Write in a file named **Procfile**:
 web: node main.js
 ```
 
-This file simply tell Heroku that for starting this applciation, it needs to start a web dyno by running the command `node main.js`.
+This file simply tell Heroku that for starting this application, it needs to start a web dyno by running the command `node main.js`.
